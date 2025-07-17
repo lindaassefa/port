@@ -1,0 +1,129 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Modern, clean font */
+  background: linear-gradient(135deg, #f7f7f7, #fff); /* Soft gradient */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+} 
+
+/* Chat Container */
+.chat-container {
+  width: 90%;
+  width: 600px;
+  height: 600px;
+  background: white; /* White card for chat box */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #FFD700; /* Wooster yellow border */
+}
+
+/* Header */
+header {
+  background: #000; /* Black header */
+  color: #FFD700; /* Yellow text for Wooster branding */
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+header .logo {
+  width: 40px;
+  height: auto;
+}
+
+/* Chat Box */
+.chat-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f9f9f9; /* Light gray background */
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  max-height: 500px;
+}
+
+.info-message {
+  background-color: #f8f9fa; 
+  color: #333;
+  padding: 10px 20px; 
+  text-align: center; 
+  font-size: 14px;
+  border-top: 1px solid #ddd; 
+  border-bottom: 1px solid #ddd; 
+}
+
+/* Message Styles */
+.message {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 12px; /* Subtle rounded corners */
+  max-width: 100%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.user-message {
+  background: #FFD700; /* Wooster yellow for user messages */
+  color: black;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.bot-message {
+  background: #E6E6E6; /* Light gray for bot messages */
+  color: black;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  padding: 15px;
+  background: white; /* Keep input area clean and simple */
+  border-top: 1px solid #ddd;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  background: #f7f7f7; /* Light gray background for text input */
+  color: #333;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa; /* Subtle placeholder text */
+}
+
+button {
+  background: #FFD700; /* Bright yellow send button */
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #E5C100; /* Slightly darker yellow on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
