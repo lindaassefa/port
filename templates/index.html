@@ -34,7 +34,6 @@
                 return;
             }
 
-
             // Clear the input field
             document.getElementById("user-input").value = "";
  
@@ -44,8 +43,8 @@
             userMessage.textContent = userInput;
             chatBox.appendChild(userMessage);
  
-            // Send the message to the backend
-            const response = await fetch("http://127.0.0.1:5001/query", {
+            // Send the message to the backend using relative URL
+            const response = await fetch("/query", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userInput }),
