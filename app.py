@@ -1,7 +1,10 @@
 from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
-from pc_vector_store.retriever import retriever
-from persistence.memory import workflow_app
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app, resources={
@@ -30,6 +33,10 @@ def query():
         return jsonify({"response": "Please enter a message to proceed."})
 
     try:
+        # Import here to avoid cold start issues
+        from pc_vector_store.retriever import retriever
+        from persistence.memory import workflow_app
+        
         # Use the retriever to fetch a response
         config = {"configurable": {"thread_id": "abc123"}}
         result = workflow_app.invoke({"input": user_input}, config=config)
